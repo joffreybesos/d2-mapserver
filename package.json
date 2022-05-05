@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.1",
-    "canvas": "^2.9.0",
+    "canvas": "^2.9.1",
     "cli-color": "^2.0.1",
     "console-stamp": "^3.0.3",
     "cors": "^2.8.5",
