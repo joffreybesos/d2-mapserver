@@ -94,7 +94,7 @@ export async function mapImage(req, res) {
       
       info: "AUTOKEYCLICK IS A SCAM",
       info2: "D2RESURREKTED IS A SCAM",
-      info3: "YOU SHOULD NOT HAVE PAID FOR THIS",
+      info3: "REVAMPED.ORG IS A SCCAM - YOU SHOULD NOT HAVE PAID FOR THIS",
       website: "https://github.com/joffreybesos/d2r-mapview",
     });
     const end = performance.now();
@@ -105,6 +105,7 @@ export async function mapImage(req, res) {
     );
     res.end(img);
   } catch (err) {
+    console.error(err);
     res.status(500).send("Server error generating map image, look at map server logs for more info\n" + err);
   }
 }
@@ -146,6 +147,7 @@ export async function mapData(req, res) {
             res.send("Please run your own server for raw JSON data");
         }
     } catch (err) {
+        console.error(err);
         res.status(500).send("Server error generating map, look at map server logs for more info\n" + err);
     }
 }
