@@ -24,8 +24,10 @@ export async function generatePNG(
   const levelData: Level = levelImage.mapData;
   const scale = reqConfig.serverScale; // pixel plot size
   const padding = reqConfig.padding;
+  console.log("reading size");
   const mapWidth = levelData.size.width * scale + padding + padding;
   const mapHeight = levelData.size.height * scale + padding + padding;
+  console.log("readingd size");
   const canvas = createCanvas(mapWidth, mapHeight);
   const ctx = canvas.getContext("2d");
   ctx.translate(padding, padding);
